@@ -1,0 +1,70 @@
+{
+    "students": [
+      {
+        "id": "S101",
+        "name": "Alice Johnson",
+        "batch": "2024",
+        "section": "A",
+        "subjects_registered": [
+          "Mathematics",
+          "Physics",
+          "Chemistry",
+          "Computer Science"
+        ],
+        "phone_number": "+1-123-456-7890",
+        "email": "alice.johnson@example.com",
+        "address": {
+          "street": "123 Maple Street",
+          "city": "Springfield",
+          "state": "IL",
+          "zip": "62704",
+          "country": "USA"
+        }
+      },
+      {
+        "id": "S102",
+        "name": "Bob Smith",
+        "batch": "2025",
+        "section": "B",
+        "subjects_registered": [
+          "Biology",
+          "Chemistry",
+          "English Literature",
+          "History"
+        ],
+        "phone_number": "+1-987-654-3210",
+        "email": "bob.smith@example.com",
+        "address": {
+          "street": "456 Oak Avenue",
+          "city": "Metropolis",
+          "state": "NY",
+          "zip": "10001",
+          "country": "USA"
+        }
+      },
+      {
+        "id": "S103",
+        "name": "Charlie Brown",
+        "batch": "2023",
+        "section": "C",
+        "subjects_registered": [
+          "Economics",
+          "Political Science",
+          "Statistics",
+          "Philosophy"
+        ],
+        "phone_number": "+1-555-123-4567",
+        "email": "charlie.brown@example.com",
+        "address": {
+          "street": "789 Birch Lane",
+          "city": "Gotham",
+          "state": "CA",
+          "zip": "90001",
+          "country": "USA"
+        }
+      }
+      
+
+    ]
+  }
+  
