@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch Student Records</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1>Student Records</h1>
+    <div id="output"></div>
+
+    <script>
+        // Raw GitHub URL for the JSON file
+        const url = "https://raw.githubusercontent.com/ammarbinanwarfuad/WebKSATheoryGUB/main/student_records.json";
+
+        // AJAX request using jQuery
+        $.ajax({
+            url: url,
+            method: "GET",
+            dataType: "json",
+            success: function (data) {
+                // Display the student records on the webpage
+                let output = "<h2>Student Details:</h2>";
+                data.students.forEach(student => {
+                    output += `<p>
+                        <strong>ID:</strong> ${student.id} <br>
+                        <strong>Name:</strong> ${student.name} <br>
+                        <strong>Batch:</strong> ${student.batch} <br>
+                        <strong>Section:</strong> ${student.section} <br>
+                        <strong>Subjects:</strong> ${student.subjects_registered.join(", ")} <br>
+                        <strong>Email:</strong> ${student.email} <br>
+                        <strong>Phone:</strong> ${student.phone_number} <br>
+                        <strong>Address:</strong> ${student.address.street}, ${student.address.city}, ${student.address.state}, ${student.address.zip}, ${student.address.country}
+                    </p><hr>`;
+                });
+                $("#output").html(output);
+            },
+            error: function (xhr, status, error) {
+                console.error("Failed to fetch data:", error);
+                $("#output").html(`<p style="color: red;">Error fetching student records: ${status}</p>`);
+            }
+        });
+    </script>
+</body>
+</html>
